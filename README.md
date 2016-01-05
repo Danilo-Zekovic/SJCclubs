@@ -5,7 +5,7 @@ I imagened this to be organized as SPA
 
 To run the app:   
 1. go to SJCclubs directory   
-2. npm install
-3. node app.js
-4. in your browser go to localhost:4000
+2. npm install   
+3. node app.js    
+4. in your browser go to localhost:4000   
 
