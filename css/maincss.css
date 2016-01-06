@@ -1,0 +1,8 @@
+/*
+ * maincss.css
+ * Danilo Zekovic
+ * css file that will branch into other css files
+ * also it will contain main style for the app
+ */
+
+@import "nav.css";
