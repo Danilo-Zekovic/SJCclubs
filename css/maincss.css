@@ -4,3 +4,9 @@
  * Css file that will lead to other css files and
  * define css for main page
  */
+
+@import "nav.css"; /* this is sweeeeeeet way to organize css files */
+
+div {
+  background: green; /* just testing styles for now */
+}
