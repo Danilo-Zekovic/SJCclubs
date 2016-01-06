@@ -1,7 +1,7 @@
 /*
  * spa.shell.js
  * Danilo Zekovic
- * Main shell, basic structure of the app
+ * Main shell, basic structure of the app...
 */
 
 spa.shell = (function () {
