@@ -9,39 +9,35 @@ spa.shell = (function () {
   var
     configMap = {
       main_html : String()
-      +'<nav>'
-      +'<div class="navbar navbar-default" role="navigation">'
-      +'<div class="navbar-header">'
-      +'<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">'
-      +'<span class="sr-only">Toggle navigation</span>'
-      +'<span class="icon-bar"></span>'
-      +'<span class="icon-bar"></span>'
-      +'<span class="icon-bar"></span>'
-      +'</button>'
-      +'<a class="navbar-brand" href="/">SJC SPA Demo</a>'
-      +'</div>'
-      +'<ul class="nav navbar-nav navbar-right" id="logs">'
-      +'<li id="sign"><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>'
-      +'<li id="log"><a href=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>'
-      +'</ul>'
-      +'</div></nav>'
-
-      +'<nav class="collapse navbar-collapse navbar-ex1-collapse col-md-8 col-sm-7">'
-      +'<ul class="nav nav-sidebar" id="side">'
-      +'<li><a href="/">Home</a></li>'
-      +'<li><a href="/dates">Date Calculator</a></li>'
-      +'<li><a href="/socket">socket.io Data Channel</a></li>'
-      +'<li><a href="/">SEO Concerns</a></li>'
-      +'<li id="signUp"><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>'
-      +'<li id="logIn"><a href=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>'
-      +'</ul>'
-      +'</nav>'
-
-      +'<section><div id="content-main">Feature Content Region'
-      + '</div></section>'
-      +'<section><div id="content-dates"></div></section>'
-      +'<section><div id="content-socket"></div></section>'
-      +'<section><div id="content-seo"></div></section>'
+      + '<div>Saint Joseph\'s College Clubs Page</div>'
+      + '<nav class="navbar navbar-default" role="navigation">'
+      +   '<div class="container">'
+      +      '<!-- Brand and toggle get grouped for better mobile display -->'
+      +      '<div class="navbar-header">'
+      +         '<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">'
+      +            '<span class="sr-only">Toggle navigation</span>'
+      +            '<span class="icon-bar"></span>'
+      +            '<span class="icon-bar"></span>'
+      +            '<span class="icon-bar"></span>'
+      +         '</button>'
+      +         '<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->'
+      +         '<a class="navbar-brand" href="index.html">SJC</a>'
+      +      '</div>'
+      +      '<!-- Collect the nav links, forms, and other content for toggling -->'
+      +      '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">'
+      +         '<ul class="nav navbar-nav">'
+      +            '<li>'
+      +              '<a href="#/">Clubs</a>'
+      +            '</li>'
+      +            '<li>'
+      +              '<a href="#/about">About</a>'
+      +            '</li>'
+      +         '</ul>'
+      +      '</div>'
+      +      '<!-- /.navbar-collapse -->'
+      +    '</div>'
+      +    '<!-- /.container -->'
+      + '</nav>'
     },
 
     stateMap = {
@@ -98,7 +94,7 @@ spa.shell = (function () {
     currentMod = jqueryMap.$content;
 
     // Set up routes
-    page('/', index);
+    //page('/', index);
 
 
   }; // End public method initModule
