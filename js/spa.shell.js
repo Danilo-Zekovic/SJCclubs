@@ -1,5 +1,6 @@
 /*
  * spa.shell.js
+ * Danilo Zekovic
  * Shell for OSCON Demo
 */
 
