@@ -8,4 +8,8 @@ To run the app:
 2. npm install   
 3. node app.js    
 4. in your browser go to localhost:4000   
+5. 
+
+
+Danilo Zekovic
 
