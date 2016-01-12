@@ -10,6 +10,6 @@ To run the app:
 4. in your browser go to localhost:4000   
 5. 
 
-
+Author,    
 Danilo Zekovic
 
