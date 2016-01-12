@@ -1,6 +1,6 @@
 # SJCclubs
 Just for practice I thought I could build the web app with all the clubs from Saint joe listed   
-I imagened this to be organized as SPA
+I imagened this to be organized as Single Page Web Application (SPA)
 
 
 To run the app:   
