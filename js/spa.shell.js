@@ -39,6 +39,9 @@ spa.shell = (function () {
       +    '</div>'
       +    '<!-- /.container -->'
       + '</nav>'
+
+      + '<div>'
+      + '</div>'
     },
 
     stateMap = {
