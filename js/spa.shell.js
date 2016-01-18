@@ -83,9 +83,10 @@ spa.shell = (function () {
     jqueryMap.$main.show();
     }
 
-  function club1() {
-    if(currentMod != jqueryMap.$clubs)
+  function clubs() {
+    if( currentMod != jqueryMap.$clubs ) {
       currentMod.hide();
+    }
     currentMod = jqueryMap.$clubs;
     //spa.club1.postSection(); // will not work yet until spa.club1.js is created
   }
