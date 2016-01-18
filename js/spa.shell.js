@@ -40,8 +40,10 @@ spa.shell = (function () {
       +    '<!-- /.container -->'
       + '</nav>'
 
-      + '<div>'
-      + '</div>'
+      + '<section><div id="main-page">'
+      + '</div></section>'
+      + '<section><div id="club1">'
+      + '</div></section>'
     },
 
     stateMap = {
@@ -66,6 +68,8 @@ spa.shell = (function () {
     // Only three regions for now
     jqueryMap = {
       $container : $container,
+      $main      : $container.find('#main-page'),
+      $club1     : $container.find('#club1')    // just for testing purposes
     };
   };
   // End DOM method /setJqueryMap
