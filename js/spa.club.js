@@ -1,6 +1,7 @@
 /*
+ * spa.club.js
  * Danilo Zekovic
- * testing to display club 1
+ * testing to display clubs
  */
 
 spa.club = (function (){
