@@ -80,8 +80,15 @@ spa.shell = (function () {
   function index() {
     currentMod.hide();
     currentMod = jqueryMap.$content;
-    jqueryMap.$content.show();
+    jqueryMap.$main.show();
     }
+
+  function club1() {
+    if(currentMod != jqueryMap.$club1)
+      currentMod.hide();
+    currentMod = jqueryMap.$club1;
+    //spa.club1.postSection(); // will not work yet until spa.club1.js is created
+  }
 
   // End DOM client-side router methods
 
