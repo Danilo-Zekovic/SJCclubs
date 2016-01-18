@@ -17,7 +17,7 @@ spa.club = (function (){
     },
 
     jqueryMap = {},
-    initModule, serverURL;
+    initModule, serverURL, setJqueryMap;
     // end local variables
 
     setJqueryMap = function () {
@@ -41,6 +41,11 @@ spa.club = (function (){
 
       setJqueryMap();
 
-      
-    }
-})
+
+    };
+
+    return {
+      initModule  : initModule,
+      //postSection : postSection
+    };
+}());
