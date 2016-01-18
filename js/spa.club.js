@@ -32,6 +32,7 @@ spa.club = (function (){
     // public methods
     initModule = function ( $container ) {
 
+      console.log("clubs page reached");
       //set to taste
       serverURL = 'http://localhost:4000';
 
@@ -41,7 +42,7 @@ spa.club = (function (){
       $container.html( configMap.main_html );
 
       setJqueryMap();
-
+      console.log("initModule over");
 
     };
 
