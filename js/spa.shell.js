@@ -28,10 +28,10 @@ spa.shell = (function () {
       +      '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">'
       +         '<ul class="nav navbar-nav">'
       +            '<li>'
-      +              '<a href="#/">Clubs</a>'
+      +              '<a href="/clubs">Clubs</a>'
       +            '</li>'
       +            '<li>'
-      +              '<a href="#/about">About</a>'
+      +              '<a href="/about">About</a>'
       +            '</li>'
       +         '</ul>'
       +      '</div>'
@@ -42,7 +42,7 @@ spa.shell = (function () {
 
       + '<section><div id="main-page">'
       + '</div></section>'
-      + '<section><div id="club1">'
+      + '<section><div id="clubs">'
       + '</div></section>'
     },
 
@@ -69,7 +69,7 @@ spa.shell = (function () {
     jqueryMap = {
       $container : $container,
       $main      : $container.find('#main-page'),
-      $club1     : $container.find('#club1')    // just for testing purposes
+      $clubs     : $container.find('#clubs')    // just for testing purposes
     };
   };
   // End DOM method /setJqueryMap
@@ -84,9 +84,9 @@ spa.shell = (function () {
     }
 
   function club1() {
-    if(currentMod != jqueryMap.$club1)
+    if(currentMod != jqueryMap.$clubs)
       currentMod.hide();
-    currentMod = jqueryMap.$club1;
+    currentMod = jqueryMap.$clubs;
     //spa.club1.postSection(); // will not work yet until spa.club1.js is created
   }
 
@@ -105,11 +105,16 @@ spa.shell = (function () {
     // Keep track of our elements
     setJqueryMap();
 
+    spa.club.initModule(jqueryMap.$clubs);
+
     // Default content is "home" screen
     currentMod = jqueryMap.$content;
 
     // Set up routes
-    //page('/', index);
+    page('/', index);
+    page('/clubs', clubs);
+    page();
+
 
 
   }; // End public method initModule
