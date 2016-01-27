@@ -79,16 +79,16 @@ spa.shell = (function () {
   // Base route
   function index() {
     currentMod.hide();
-    currentMod = jqueryMap.$content;
+    currentMod = jqueryMap.$main;
     jqueryMap.$main.show();
     }
 
   function clubs() {
     if( currentMod != jqueryMap.$clubs ) {
-    //  currentMod.hide();
+      currentMod.hide();
     }
     currentMod = jqueryMap.$clubs;
-    //spa.club1.postSection(); // will not work yet until spa.club1.js is created
+    //spa.club.postSection(); // will not work yet until spa.club.postSection() is created
   }
 
   // End DOM client-side router methods
@@ -109,7 +109,7 @@ spa.shell = (function () {
     spa.club.initModule(jqueryMap.$clubs);
 
     // Default content is "home" screen
-    currentMod = jqueryMap.$content;
+    currentMod = jqueryMap.$main;
 
     // Set up routes
     page('/', index);
