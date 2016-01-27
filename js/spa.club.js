@@ -34,12 +34,12 @@ spa.club = (function (){
 
       console.log("clubs page reached");
       //set to taste
-      serverURL = 'http://localhost:4000';
+      //serverURL = 'http://localhost:4000';
 
       // load HTML and jquery collections
       stateMap.$container = $container;
       $container.hide();
-      $container.html( configMap.main_html );
+      $container.html( configMap.main_html ).show();
 
       setJqueryMap();
       console.log("initModule over");
