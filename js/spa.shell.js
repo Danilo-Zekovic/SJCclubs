@@ -22,11 +22,14 @@ spa.shell = (function () {
       +            '<span class="icon-bar"></span>'
       +         '</button>'
       +         '<!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->'
-      +         '<a class="navbar-brand" href="index.html">SJC</a>'
+      +         '<a class="navbar-brand" href="/">SJC</a>'
       +      '</div>'
       +      '<!-- Collect the nav links, forms, and other content for toggling -->'
       +      '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">'
       +         '<ul class="nav navbar-nav">'
+      +            '<li>'
+      +              '<a href="/">Home</a>'
+      +            '</li>'
       +            '<li>'
       +              '<a href="/clubs">Clubs</a>'
       +            '</li>'
@@ -43,7 +46,9 @@ spa.shell = (function () {
       + '<section><div id="main-page">'
       +   'Author Danilo Zekovic'
       + '</div></section>'
-      + '<section><div id="clubs">'
+      + '<section><div id="clubs-view">'
+      + '</div></section>'
+      + '<section><div id="about-view">'
       + '</div></section>'
     },
 
@@ -70,7 +75,8 @@ spa.shell = (function () {
     jqueryMap = {
       $container : $container,
       $main      : $container.find('#main-page'),
-      $clubs     : $container.find('#clubs')    
+      $clubs     : $container.find('#clubs-view'),
+      $about     : $container.find('#about-view')
     };
   };
   // End DOM method /setJqueryMap
@@ -93,6 +99,14 @@ spa.shell = (function () {
     //spa.club.postSection(); // will not work yet until spa.club.postSection() is created
   }
 
+  function about() {
+    if( currentMod != jqueryMap.$about) {
+      currentMod.hide();
+    }
+    currentMod = jqueryMap.$about;
+    currentMod.show();
+  }
+
   // End DOM client-side router methods
 
   // -- end DOM-oriented methods //
@@ -109,7 +123,9 @@ spa.shell = (function () {
     setJqueryMap();
 
     spa.club.initModule(jqueryMap.$clubs);
+    spa.club.initModule(jqueryMap.$about);
     jqueryMap.$clubs.hide();
+    jqueryMap.$about.hide();
 
     // Default content is "home" screen
     currentMod = jqueryMap.$main;
@@ -117,6 +133,7 @@ spa.shell = (function () {
     // Set up routes
     page('/', index);
     page('/clubs', clubs);
+    page('/about', about);
     page();
 
 
