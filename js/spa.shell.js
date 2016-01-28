@@ -41,6 +41,7 @@ spa.shell = (function () {
       + '</nav>'
 
       + '<section><div id="main-page">'
+      +   'Author Danilo Zekovic'
       + '</div></section>'
       + '<section><div id="clubs">'
       + '</div></section>'
@@ -69,7 +70,7 @@ spa.shell = (function () {
     jqueryMap = {
       $container : $container,
       $main      : $container.find('#main-page'),
-      $clubs     : $container.find('#clubs')    // just for testing purposes
+      $clubs     : $container.find('#clubs')    
     };
   };
   // End DOM method /setJqueryMap
@@ -88,6 +89,7 @@ spa.shell = (function () {
       currentMod.hide();
     }
     currentMod = jqueryMap.$clubs;
+    currentMod.show();
     //spa.club.postSection(); // will not work yet until spa.club.postSection() is created
   }
 
@@ -107,6 +109,7 @@ spa.shell = (function () {
     setJqueryMap();
 
     spa.club.initModule(jqueryMap.$clubs);
+    jqueryMap.$clubs.hide();
 
     // Default content is "home" screen
     currentMod = jqueryMap.$main;
