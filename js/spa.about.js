@@ -10,8 +10,9 @@ spa.about = (function (){
   var
     configMap = {
       main_html : String()
+        + '<br>'
         + '<div class="container">'
-        +   '<div class="jumbotron">'
+        +   '<div class="jumbotron about-jb">'
         +     '<h1>About Clubs and Activities at SJC</h1>'
         +     '<p>There is so much to discover</p>'
         +   '</div>'
