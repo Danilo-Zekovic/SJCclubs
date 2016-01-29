@@ -10,7 +10,17 @@ spa.about = (function (){
   var
     configMap = {
       main_html : String()
-        + '<p>About one test page</p>'
+        + '<div class="container">'
+        +   '<div class="jumbotron">'
+        +     '<h1>About Clubs and Activities at SJC</h1>'
+        +     '<p>There is so much to discover</p>'
+        +   '</div>'
+        +   '<div class="row">'
+        +     '<div class="col-md-12"'
+        +       '<p>text goes here</p>'
+        +     '</div>'
+        +   '</div>'
+        + '</div>'
     },
 
     stateMap = {
