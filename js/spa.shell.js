@@ -123,7 +123,7 @@ spa.shell = (function () {
     setJqueryMap();
 
     spa.club.initModule(jqueryMap.$clubs);
-    spa.club.initModule(jqueryMap.$about);
+    spa.about.initModule(jqueryMap.$about);
     jqueryMap.$clubs.hide();
     jqueryMap.$about.hide();
 
