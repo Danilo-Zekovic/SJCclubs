@@ -8,9 +8,16 @@
 @import "nav.css";
 @import "clubs.css";
 @import "about.css";
+@import "home.css";
 
 #page-title {
   margin: 20px;
   font-size: 24px;
   text-align: center;
+}
+
+#footer {
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
