@@ -1,0 +1,15 @@
+/*
+ * home.css
+ * Danilo Zekovic
+ * styling for home view
+ */
+
+ #home-view {
+   background-color: purple;
+ }
+
+.social-media {
+  background-color: #eee;
+  text-align: center;
+  margin: 10px;
+}
