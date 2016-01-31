@@ -1,8 +1,19 @@
-/**
+/*
  * Danilo Zekovic
  * styling for clubs view
  */
 
 #clubs-view {
   background-color: orange;
+}
+
+#clubs {
+  padding-bottom: 24px;
+}
+
+.club-type {
+  background-color: green;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
 }
