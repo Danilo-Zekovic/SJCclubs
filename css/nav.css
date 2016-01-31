@@ -3,3 +3,8 @@
  * Danilo Zekovic
  * Contains styles for navigation bar. testing
  */
+
+ .navbar-custom  {
+   margin-bottom: 0px !important;
+   border-radius: 0px !important;
+ }
