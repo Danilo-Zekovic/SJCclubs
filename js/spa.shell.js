@@ -10,8 +10,8 @@ spa.shell = (function () {
   var
     configMap = {
       main_html : String()
-      + '<div>Saint Joseph\'s College Clubs Page</div>'
-      + '<nav class="navbar navbar-default" role="navigation">'
+      + '<p id="page-title">Saint Joseph\'s College Clubs Page</p>'
+      + '<nav class="navbar navbar-default navbar-custom" role="navigation">'
       +   '<div class="container">'
       +      '<!-- Brand and toggle get grouped for better mobile display -->'
       +      '<div class="navbar-header">'
@@ -43,13 +43,17 @@ spa.shell = (function () {
       +    '<!-- /.container -->'
       + '</nav>'
 
-      + '<section><div id="main-page">'
+      + '<section><div id="home-view">'
       +   'Author Danilo Zekovic'
       + '</div></section>'
       + '<section><div id="clubs-view">'
       + '</div></section>'
       + '<section><div id="about-view">'
       + '</div></section>'
+
+      + '<div id="footer">'
+      + '<p>Design by: Danilo Zekovic<br>Saint Joseph\'s College<br>www.saintjoe.edu 2015</p>'
+      + '</div>'
     },
 
     stateMap = {
@@ -74,7 +78,7 @@ spa.shell = (function () {
     // Only three regions for now
     jqueryMap = {
       $container : $container,
-      $main      : $container.find('#main-page'),
+      $main      : $container.find('#home-view'),
       $clubs     : $container.find('#clubs-view'),
       $about     : $container.find('#about-view')
     };
@@ -85,9 +89,13 @@ spa.shell = (function () {
 
   // Base route
   function index() {
-    currentMod.hide();
+    if( currentMod != jqueryMap.$main ) {
+      currentMod.hide();
+    }
+    //currentMod.hide();
     currentMod = jqueryMap.$main;
-    jqueryMap.$main.show();
+    currentMod.show();
+    //jqueryMap.$main.show();
     }
 
   function clubs() {
@@ -124,8 +132,10 @@ spa.shell = (function () {
 
     spa.club.initModule(jqueryMap.$clubs);
     spa.about.initModule(jqueryMap.$about);
+    spa.home.initModule(jqueryMap.$main);
     jqueryMap.$clubs.hide();
     jqueryMap.$about.hide();
+    jqueryMap.$main.hide();
 
     // Default content is "home" screen
     currentMod = jqueryMap.$main;
