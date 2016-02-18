@@ -16,4 +16,10 @@
   border-radius: 8px;
   text-align: center;
   color: white;
+  width: 100%;
+}
+
+.club-group {
+  background-color: blue;
+  border-radius: 8px 8px 0 0;
 }
