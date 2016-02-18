@@ -1,7 +1,7 @@
 /*
  * spa.club.js
  * Danilo Zekovic
- * testing to display clubs 
+ * testing to display clubs
  */
 
 spa.club = (function (){
@@ -17,8 +17,12 @@ spa.club = (function (){
       +     '<p>There is something for everybody</p>'
       +   '</div>'
       +   '<div class="row">'
-      +     '<div class="col-md-12">'
-      +       '<h1 class="club-type">Academic</h1>'
+      +     '<div  class="col-md-12">'
+      +       '<div id="academic" class="academic-content club-group">'
+      +       '<button id="btn-academic" class="btn btn-info btn-lg club-type" type="submit">Academic</button>'
+
+      +         '<p>foo</p>'
+      +       '</div>'
       +     '</div>'
       +   '</div>'
       +   '<div class="row">'
@@ -61,7 +65,9 @@ spa.club = (function (){
       var $container = stateMap.$container;
 
       jqueryMap = {
-        $container : $container
+        $container : $container,
+        $academic_bt  : $container.find('#btn-academic'),
+        $academic     : $container.find('#academic')
       };
     };
 
@@ -79,6 +85,12 @@ spa.club = (function (){
 
       setJqueryMap();
       console.log("initModule over");
+
+      jqueryMap.$academic_bt.click(function(){
+        console.log("academic got clicked");
+        jqueryMap.$academic.style.transition = "height 0.2s linear 0s";
+        jqueryMap.$academic.style.height = "200px";
+      });
 
     };
 
